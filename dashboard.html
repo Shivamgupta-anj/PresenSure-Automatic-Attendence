@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Automated Attendance</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>📊 Dashboard</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="attendance.html">Mark Attendance</a>
+    <a href="#">Student Records</a>
+    <a href="#">Reports</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="card">
+      <h3>👩‍🏫 Attendance Overview</h3>
+      <div class="stats">
+        <div class="stat"><p>Total Students</p><h4>120</h4></div>
+        <div class="stat"><p>Present Today</p><h4 id="presentCount">0</h4></div>
+        <div class="stat"><p>Attendance %</p><h4 id="presentPercent">0%</h4></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📈 Weekly Attendance Trend</h3>
+      <canvas id="attendanceChart"></canvas>
+    </div>
+  </div>
+
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
